@@ -104,10 +104,10 @@ public class Server {
             name = line.split(" ")[1];
             session = line.split(" ")[2];
             if (session.equals(arg)){
-                courseListe[i] = new Course;
-                courseListe[i].setCode(code);
-                courseListe[i].setName(code);
-                courseListe[i].setSession(code);
+                courseListe[counter] = new Course;
+                courseListe[counter].setCode(code);
+                courseListe[counter].setName(code);
+                courseListe[counter].setSession(code);
                 i++
             }
         }
