@@ -1,11 +1,10 @@
 package server;
-package Course.java;
 
 import javafx.util.Pair;
+import server.models.Course;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.Scanner;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -95,20 +94,20 @@ public class Server {
         // TODO: implémenter cette méthode
         File courses = new File("IFT1025-TP2-server-main/src/main/java/server/data/cours.txt");
         FileReader readCourses = new FileReader(courses);
-        BuffereadReader buffCourses = new BufferedReader(readCourses);
+        BufferedReader buffCourses = new BufferedReader(readCourses);
         String line;
         Course[] courseListe = new Course[];
         int counter = 0;
         while((line = buffCourses.readLine()) != null){
-            code = line.split(" ")[0];
-            name = line.split(" ")[1];
-            session = line.split(" ")[2];
+            String code = line.split(" ")[0];
+            String name = line.split(" ")[1];
+            String session = line.split(" ")[2];
             if (session.equals(arg)){
                 courseListe[counter] = new Course;
                 courseListe[counter].setCode(code);
                 courseListe[counter].setName(code);
                 courseListe[counter].setSession(code);
-                i++
+                counter++;
             }
         }
         readCourses.close;
