@@ -2,6 +2,7 @@ package server;
 
 import javafx.util.Pair;
 import server.models.Course;
+import server.models.RegistrationForm;
 
 import java.io.*;
 import java.util.Scanner;
@@ -111,9 +112,9 @@ public class Server {
             objectOutputStream.writeObject(courseList);
             System.out.println("Liste de cours pour la session demandée a été envoyée");
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.out.println("Lecture du fichier impossible");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println("Exportation dans le flux échoué");
         }
     }
 
@@ -124,6 +125,31 @@ public class Server {
      */
     public void handleRegistration() {
         // TODO: implémenter cette méthode
+        try {
+            RegistrationForm registrationForm = (RegistrationForm) objectInputStream.readObject();
+            String prenom = registrationForm.getPrenom();
+            String nom = registrationForm.getNom();
+            String email = registrationForm.getEmail();
+            String matricule = registrationForm.getMatricule();
+
+            Course course = registrationForm.getCourse();
+            String session = course.getSession();
+            String code = course.getCode();
+
+            FileWriter registration = new FileWriter("server/data/inscription.txt");
+            registration.write(session + " " + code + " " + matricule + "   " + prenom + " " + nom + " " + email);
+            registration.close();
+            System.out.println("Inscription enregistré avec succès");
+
+            // TODO: Il manque message de confirmation envoyé au client
+            } catch (FileNotFoundException e) {
+                System.out.println("Impossible d'écrire dans le fichier (inscription.txt)");
+            } catch (IOException e) {
+            System.out.println("Erreur lors de la réception du formulaire");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Erreur dans la lecture de l'objet (formulaire) reçu");
+        }
+
     }
-}
+    }
 
