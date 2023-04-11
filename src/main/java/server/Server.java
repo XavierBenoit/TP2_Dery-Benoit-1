@@ -84,7 +84,7 @@ public class Server {
     }
 
     /**
-     Lire un fichier texte contenant des informations sur les cours et les transofmer en liste d'objets 'Course'.
+     Lire un fichier texte contenant des informations sur les cours et les transformer en liste d'objets 'Course'.
      La méthode filtre les cours par la session spécifiée en argument.
      Ensuite, elle renvoie la liste des cours pour une session au client en utilisant l'objet 'objectOutputStream'.
      La méthode gère les exceptions si une erreur se produit lors de la lecture du fichier ou de l'écriture de l'objet dans le flux.
@@ -92,27 +92,29 @@ public class Server {
      */
     public void handleLoadCourses(String arg) {
         // TODO: implémenter cette méthode
-        File courses = new File("IFT1025-TP2-server-main/src/main/java/server/data/cours.txt");
-        FileReader readCourses = new FileReader(courses);
-        BufferedReader buffCourses = new BufferedReader(readCourses);
-        String line;
-        Course[] courseListe = new Course[];
-        int counter = 0;
-        while((line = buffCourses.readLine()) != null){
-            String code = line.split(" ")[0];
-            String name = line.split(" ")[1];
-            String session = line.split(" ")[2];
-            if (session.equals(arg)){
-                courseListe[counter] = new Course;
-                courseListe[counter].setCode(code);
-                courseListe[counter].setName(code);
-                courseListe[counter].setSession(code);
-                counter++;
+        try {
+            File courses = new File("IFT1025-TP2-server-main/src/main/java/server/data/cours.txt");
+            FileReader readCourses = new FileReader(courses);
+            BufferedReader buffCourses = new BufferedReader(readCourses);
+            String line;
+            ArrayList<Course> courseList = new ArrayList<Course>();
+            while ((line = buffCourses.readLine()) != null) {
+                String code = line.split(" ")[0];
+                String name = line.split(" ")[1];
+                String session = line.split(" ")[2];
+                if (session.equals(arg)) {
+                    courseList.add(new Course(code, name, session));
+                }
             }
+            System.out.println(courseList);
+            readCourses.close();
+            objectOutputStream.writeObject(courseList);
+            System.out.println("Liste de cours pour la session demandée a été envoyée");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        readCourses.close;
-        objectOutputStream.writeObject(courseListe);
-        System.out.println("Liste de cours pour la session demandée a été envoyée")
     }
 
     /**
