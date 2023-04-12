@@ -61,4 +61,4 @@ public class RegistrationForm implements Serializable {
     public String toString() {
         return "InscriptionForm{" + "prenom='" + prenom + '\'' + ", nom='" + nom + '\'' + ", email='" + email + '\'' + ", matricule='" + matricule + '\'' + ", course='" + course + '\'' + '}';
     }
-} //InscriptionForm{prenom=..., nom=..., email=...}
+}

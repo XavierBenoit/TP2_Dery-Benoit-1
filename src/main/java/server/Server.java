@@ -11,8 +11,15 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Un serveur qui reçoit des requêtes pour visualiser les cours du fichier cours.txt
+ *
+ */
 public class Server {
 
+    /**
+     *
+     */
     public final static String REGISTER_COMMAND = "INSCRIRE";
     public final static String LOAD_COMMAND = "CHARGER";
     private final ServerSocket server;
@@ -21,22 +28,40 @@ public class Server {
     private ObjectOutputStream objectOutputStream;
     private final ArrayList<EventHandler> handlers;
 
+    /**
+     * Constructeur
+     *
+     * @param port
+     * @throws IOException
+     */
     public Server(int port) throws IOException {
         this.server = new ServerSocket(port, 1);
         this.handlers = new ArrayList<EventHandler>();
         this.addEventHandler(this::handleEvents);
     }
 
+    /**
+     *
+     * @param h
+     */
     public void addEventHandler(EventHandler h) {
         this.handlers.add(h);
     }
 
+    /**
+     *
+     * @param cmd
+     * @param arg
+     */
     private void alertHandlers(String cmd, String arg) {
         for (EventHandler h : this.handlers) {
             h.handle(cmd, arg);
         }
     }
 
+    /**
+     *
+     */
     public void run() {
         while (true) {
             try {
@@ -53,6 +78,11 @@ public class Server {
         }
     }
 
+    /**
+     *
+      * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public void listen() throws IOException, ClassNotFoundException {
         String line;
         if ((line = this.objectInputStream.readObject().toString()) != null) {
@@ -63,6 +93,11 @@ public class Server {
         }
     }
 
+    /**
+     *
+     * @param line
+     * @return
+     */
     public Pair<String, String> processCommandLine(String line) {
         String[] parts = line.split(" ");
         String cmd = parts[0];
@@ -70,12 +105,21 @@ public class Server {
         return new Pair<>(cmd, args);
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void disconnect() throws IOException {
         objectOutputStream.close();
         objectInputStream.close();
         client.close();
     }
 
+    /**
+     *
+     * @param cmd
+     * @param arg
+     */
     public void handleEvents(String cmd, String arg) {
         if (cmd.equals(REGISTER_COMMAND)) {
             handleRegistration();
@@ -100,9 +144,9 @@ public class Server {
             String line;
             ArrayList<Course> courseList = new ArrayList<Course>();
             while ((line = buffCourses.readLine()) != null) {
-                String code = line.split("/t")[0];
-                String name = line.split("/t")[1];
-                String session = line.split("/t")[2];
+                String code = line.split(" ")[0];
+                String name = line.split(" ")[1];
+                String session = line.split(" ")[2];
                 if (session.equals(arg)) {
                     courseList.add(new Course(code, name, session));
                 }
@@ -137,7 +181,7 @@ public class Server {
             String code = course.getCode();
 
             FileWriter registration = new FileWriter("server/data/inscription.txt");
-            registration.write(session + "/t" + code + "/t" + matricule + "/t" + prenom + "/t" + nom + "/t" + email);
+            registration.write(session + " " + code + " " + matricule + "   " + prenom + " " + nom + " " + email);
             registration.close();
             System.out.println("Inscription enregistré avec succès");
 
