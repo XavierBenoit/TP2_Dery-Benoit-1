@@ -2,15 +2,10 @@ package client.model;
 
 import java.net.UnknownHostException;
 import java.util.Scanner;
-import javafx.util.Pair;
-import server.models.Course;
-import server.models.RegistrationForm;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 public class Client {
@@ -87,7 +82,7 @@ public class Client {
                         chargerListe();
                     }
                     case "2" -> {
-                        envoyerInscription();
+                        envoyerInscription(courseList);
                     }
                 }
             }
@@ -100,7 +95,55 @@ public class Client {
             throw new RuntimeException(e);
         }
     }
-public void envoyerInscription(){
+public void envoyerInscription(ArrayList<Course> courseList) throws IOException {
+    Scanner inscriptionScanner = new Scanner (System.in);
+    System.out.print("Veuillez saisir votre prénom");
+    String prenom = inscriptionScanner.nextLine();
+
+    System.out.print("Veuillez saisir votre nom");
+    String nom = inscriptionScanner.nextLine();
+
+    System.out.print("Veuillez saisir votre email");
+    String email = inscriptionScanner.nextLine();
+
+    System.out.print("Veuillez saisir votre matricule");
+    String matricule = inscriptionScanner.nextLine();
+
+    System.out.print("Veuillez saisir le code du cours");
+    String code = inscriptionScanner.nextLine();
+
+    ArrayList<Course> currentCourseList = courseList;
+
+    boolean courseFound = false;
+    int count = 0;
+    String tempName = null;
+    String tempSession = null;
+    while (currentCourseList.size() > count && courseFound == false) {
+
+        Course tempCourse = currentCourseList.get(count);
+        String tempCode = tempCourse.getCode().toString();
+        if (tempCode.equals(code)) {
+            courseFound = true;
+            tempName = tempCourse.getName().toString();
+            tempSession = tempCourse.getSession().toString();
+            break;
+        }
+        count++;
+    }
+    if (courseFound == false){
+        System.out.println("Le cours sélectionné n'existe pas dans la liste précédemment chargée. Veuillez réessayer");
+        chargerListe();
+    }
+    Course inscriptionCourse = new Course(tempName, code, tempSession);
+
+    RegistrationForm registrationForm = new RegistrationForm(prenom, nom, email, matricule, inscriptionCourse);
+    InscriptionStreamObject inscriptionCommand = new InscriptionStreamObject("INSCRIRE", registrationForm);
+
+    objectOutputStream.writeObject(inscriptionCommand);
+
+
+
+    inscriptionScanner.close();
 
     }
 }

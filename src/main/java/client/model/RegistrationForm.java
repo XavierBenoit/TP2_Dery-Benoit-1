@@ -1,4 +1,6 @@
-package server.models;
+package client.model;
+
+import client.model.Course;
 
 import java.io.Serializable;
 
@@ -7,7 +9,7 @@ public class RegistrationForm implements Serializable {
     private String nom;
     private String email;
     private String matricule;
-    private Course course;
+    private client.model.Course course;
 
     public RegistrationForm(String prenom, String nom, String email, String matricule, Course course) {
         this.prenom = prenom;
@@ -49,7 +51,7 @@ public class RegistrationForm implements Serializable {
         this.matricule = matricule;
     }
 
-    public Course getCourse() {
+    public client.model.Course getCourse() {
         return course;
     }
 
@@ -61,4 +63,4 @@ public class RegistrationForm implements Serializable {
     public String toString() {
         return "InscriptionForm{" + "prenom='" + prenom + '\'' + ", nom='" + nom + '\'' + ", email='" + email + '\'' + ", matricule='" + matricule + '\'' + ", course='" + course + '\'' + '}';
     }
-} //InscriptionForm{prenom=..., nom=..., email=...}
+}
