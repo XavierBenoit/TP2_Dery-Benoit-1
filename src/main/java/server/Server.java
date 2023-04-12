@@ -100,9 +100,9 @@ public class Server {
             String line;
             ArrayList<Course> courseList = new ArrayList<Course>();
             while ((line = buffCourses.readLine()) != null) {
-                String code = line.split(" ")[0];
-                String name = line.split(" ")[1];
-                String session = line.split(" ")[2];
+                String code = line.split("/t")[0];
+                String name = line.split("/t")[1];
+                String session = line.split("/t")[2];
                 if (session.equals(arg)) {
                     courseList.add(new Course(code, name, session));
                 }
@@ -137,7 +137,7 @@ public class Server {
             String code = course.getCode();
 
             FileWriter registration = new FileWriter("server/data/inscription.txt");
-            registration.write(session + " " + code + " " + matricule + "   " + prenom + " " + nom + " " + email);
+            registration.write(session + "/t" + code + "/t" + matricule + "/t" + prenom + "/t" + nom + "/t" + email);
             registration.close();
             System.out.println("Inscription enregistré avec succès");
 
