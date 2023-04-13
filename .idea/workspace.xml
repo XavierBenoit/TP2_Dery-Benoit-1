@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/model/InscriptionStreamObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/client/model/RegistrationForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/model/ClientLauncher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/model/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/model/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" afterDir="false" />
-    </list>
+    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
