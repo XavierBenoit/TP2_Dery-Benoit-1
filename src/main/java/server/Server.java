@@ -13,14 +13,17 @@ import java.util.Arrays;
 
 /**
  * Un serveur qui reçoit des requêtes pour visualiser les cours du fichier cours.txt
- *
+ * ou pour entrer des inscriptions dans le fichier inscription.txt.
  */
 public class Server {
 
     /**
-     *
+     * la <code>String</code> asoociée à la commande d'inscription
      */
     public final static String REGISTER_COMMAND = "INSCRIRE";
+    /**
+     * la <code>String</code> associée à la commande de chargement
+     */
     public final static String LOAD_COMMAND = "CHARGER";
     private final ServerSocket server;
     private Socket client;
@@ -29,10 +32,11 @@ public class Server {
     private final ArrayList<EventHandler> handlers;
 
     /**
-     * Constructeur
+     * l'unique constructeur de la classe <code>Server</code>. Il initialise ce serveur sur le port
+     * entré en paramètre, pour un seul client à la fois, puis il initialise ses manipulateurs d'événements.
      *
-     * @param port
-     * @throws IOException
+     * @param port le port sur lequel ce serveur sera lancé
+     * @throws IOException Si une exception d'entrée ou de sortie (input/output) se produit
      */
     public Server(int port) throws IOException {
         this.server = new ServerSocket(port, 1);
@@ -41,16 +45,20 @@ public class Server {
     }
 
     /**
+     * Ajoute un manipulateur d'événement dans la liste de manipulateurs de ce serveur.
      *
-     * @param h
+     * @param h le manipulateur d'événement à ajouter
+     * @see EventHandler
      */
     public void addEventHandler(EventHandler h) {
         this.handlers.add(h);
     }
 
     /**
+     * Appelle la méthode <code>handle</code> de chacun des manipulateurs d'événements de ce
+     * serveur, avec une certaine commande une certaine ligne d'arguments.
      *
-     * @param cmd
+     * @param cmd la <code>String</code> de commande qui //TODO
      * @param arg
      */
     private void alertHandlers(String cmd, String arg) {
@@ -158,7 +166,7 @@ public class Server {
         } catch (FileNotFoundException e) {
             System.out.println("Lecture du fichier impossible");
         } catch (IOException e) {
-            System.out.println("Exportation dans le flux échoué");
+            System.out.println("Exportation dans le flux échouée");
         }
     }
 
@@ -183,7 +191,7 @@ public class Server {
             FileWriter registration = new FileWriter("server/data/inscription.txt");
             registration.write(session + " " + code + " " + matricule + "   " + prenom + " " + nom + " " + email);
             registration.close();
-            System.out.println("Inscription enregistré avec succès");
+            System.out.println("Inscription enregistrée avec succès");
 
             // TODO: Il manque message de confirmation envoyé au client
             } catch (FileNotFoundException e) {
