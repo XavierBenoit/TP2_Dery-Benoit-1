@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServerLauncher.java" afterDir="false" />
-    </list>
+    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="Javadoc EventHandler" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +63,18 @@
       <option name="presentableId" value="Default" />
       <updated>1680977331454</updated>
     </task>
+    <task id="LOCAL-00001" summary="Javadoc EventHandler">
+      <created>1681691745740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681691745740</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Javadoc EventHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc EventHandler" />
   </component>
 </project>
