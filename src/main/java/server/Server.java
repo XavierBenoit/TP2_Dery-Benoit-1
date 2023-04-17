@@ -18,7 +18,7 @@ import java.util.Arrays;
 public class Server {
 
     /**
-     * la <code>String</code> asoociée à la commande d'inscription
+     * la <code>String</code> associée à la commande d'inscription
      */
     public final static String REGISTER_COMMAND = "INSCRIRE";
     /**
@@ -116,8 +116,9 @@ public class Server {
     }
 
     /**
+     * Déconnecte les streams d'entrée et de sortie ainsi que le client.
      *
-     * @throws IOException
+     * @throws IOException Si une exception d'entrée ou de sortie (input/output) se produit
      */
     public void disconnect() throws IOException {
         objectOutputStream.close();
@@ -126,9 +127,11 @@ public class Server {
     }
 
     /**
+     * Gère une commande si elle correspond à l'un des deux attributs de commande de ce serveur,
+     * c'est-à-dire <code>REGISTER_COMMAND</code> ou <code>LOAD_COMMAND</code>.
      *
-     * @param cmd
-     * @param arg
+     * @param cmd la <code>String</code> de la commande à comparer
+     * @param arg la <code>String</code> de la ligne d'arguments
      */
     public void handleEvents(String cmd, String arg) {
         if (cmd.equals(REGISTER_COMMAND)) {
