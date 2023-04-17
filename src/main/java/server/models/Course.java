@@ -3,7 +3,9 @@ package server.models;
 import java.io.Serializable;
 
 /**
- * Un cours ayant un nom, un code et une session à laquelle il est donné.
+ * Un cours ayant un nom, un code et une session à laquelle il est donné. Un étudiant peut
+ * regarder une liste de cours, ou s'inscrire à un cours via un <code>RegistrationForm</code>,
+ * à l'aide du serveur.
  */
 public class Course implements Serializable {
 
@@ -12,7 +14,7 @@ public class Course implements Serializable {
     private String session;
 
     /**
-     * l'unique constructeur de la classe Course
+     * un constructeur de la classe Course
      *
      * @param name    la <code>String</code> du nom du cours
      * @param code    la <code>String</code> du code du cours
@@ -25,7 +27,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Retourne le nom du cours.
+     * Getter du nom du cours.
      *
      * @return la <code>String</code> du nom du cours
      */
@@ -34,7 +36,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Remplace le nom du cours par celui entré en paramètre.
+     * Setter du nom du cours.
      *
      * @param name la <code>String</code> du nouveau nom du cours
      */
@@ -43,7 +45,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Retourne le code du cours.
+     * Getter du code du cours.
      *
      * @return la <code>String</code> du code du cours
      */
@@ -52,7 +54,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Remplace le code du cours par celui entré en paramètre.
+     * Setter du code du cours.
      *
      * @param code la <code>String</code> du nouveau code du cours
      */
@@ -61,7 +63,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Retourne la session à laquelle le cours est donné.
+     * Getter de la session à laquelle le cours est donné.
      *
      * @return la <code>String</code> de la session à laquelle le cours est donné
      */
@@ -70,7 +72,7 @@ public class Course implements Serializable {
     }
 
     /**
-     * Remplace la session à laquelle le cours est donné par celle en paramètre.
+     * Setter de la session à laquelle le cours est donné.
      *
      * @param session la <code>String</code> de la nouvelle session à laquelle le cours est donné
      */
@@ -79,9 +81,11 @@ public class Course implements Serializable {
     }
 
     /**
-     * Retourne une <code>String</code> avec le nom de la classe et le contenu de chacun des champs.
+     * Retourne une <code>String</code> avec le nom de la classe et le contenu de chacun des
+     * champs de cette classe.
      *
-     * @return une <code>String</code> avec le nom de la classe et le contenu de chacun des champs
+     * @return une <code>String</code> avec le nom de la classe et le contenu de chacun des
+     * champs de cette classe
      */
     @Override
     public String toString() {
