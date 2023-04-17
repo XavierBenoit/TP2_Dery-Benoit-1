@@ -13,7 +13,7 @@ public class ServerLauncher {
      * Méthode principale (main), lance un nouveau serveur avec l'attribut <code>PORT</code>.
      * Si une <code>Exception</code> est rencontrée, sa trace est imprimée.
      *
-     * @param args laissé vide, pas utilisé dans la ligne de commande
+     * @param args tableau vide, car jamais utilisé
      */
     public static void main(String[] args) {
         Server server;
