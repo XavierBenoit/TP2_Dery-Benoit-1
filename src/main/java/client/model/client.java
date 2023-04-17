@@ -50,8 +50,9 @@ public class Client {
                 CommandObject command= new CommandObject("CHARGER", sessionChoisi);
                 System.out.println("Les cours offerts durant la session d'" + sessionChoisi + " sont:");
 
-                objectInputStream = new ObjectInputStream(clientSocket.getInputStream());
+                System.out.println("Ouverture Outputput");
                 objectOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
+                System.out.println("Écriture");
                 objectOutputStream.writeObject(command);
                 System.out.println("Requête de la liste de cours envoyé");
 
