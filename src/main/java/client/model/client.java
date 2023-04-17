@@ -33,7 +33,6 @@ public class Client {
             OutputStreamWriter choiceA = new OutputStreamWriter(
                     clientSocket.getOutputStream()
             );
-            while (scanner.hasNext()) {
                 String line = scanner.nextLine();
                 switch (line) {
                     case "1" -> {
@@ -47,16 +46,17 @@ public class Client {
                     }
 
                 }
-            }
             scanner.close();
                 CommandObject command= new CommandObject("CHARGER", sessionChoisi);
-                System.out.println("Les cours offerts durant la session d'" + sessionChoisi + "sont:");
+                System.out.println("Les cours offerts durant la session d'" + sessionChoisi + " sont:");
 
                 objectInputStream = new ObjectInputStream(clientSocket.getInputStream());
                 objectOutputStream = new ObjectOutputStream(clientSocket.getOutputStream());
                 objectOutputStream.writeObject(command);
+                System.out.println("Requête de la liste de cours envoyé");
 
                 ArrayList<Course> courseList = (ArrayList<Course>) objectInputStream.readObject();
+                System.out.println("Cours reçu");
 
                 int count = 0;
                 while (courseList.size() > count) {
@@ -75,9 +75,8 @@ public class Client {
             OutputStreamWriter choiceB = new OutputStreamWriter(
                     clientSocket.getOutputStream()
             );
-            while (scanner2.hasNext()) {
-                String line = scanner.nextLine();
-                switch (line) {
+                String choiceLine = scanner.nextLine();
+                switch (choiceLine) {
                     case "1" -> {
                         chargerListe();
                     }
@@ -85,7 +84,6 @@ public class Client {
                         envoyerInscription(courseList);
                     }
                 }
-            }
             scanner2.close();
     } catch (UnknownHostException e) {
             throw new RuntimeException(e);
