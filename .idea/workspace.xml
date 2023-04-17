@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/IFT1025-TP2-server.userlibraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/Server.eml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/TP2_Dery-Benoit.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/javadoc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/EventHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/ServerLauncher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/data/cours.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/data/inscription.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/models/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/main/java/server/models/RegistrationForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit-master/TP2_Dery-Benoit-master/src/test/java/server/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP2_Dery-Benoit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2O9ef3er6Nf0gV810UAQMj03KLO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/rober/Downloads/projet_JacobDery_XavierBenoit",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="client.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ServerLauncher">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="client.model.Client" />
+      <module name="TP2_Dery-Benoit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="client.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="server.ServerLauncher" />
+      <module name="TP2_Dery-Benoit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ServerLauncher" />
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="" />
+      <created>1680977331454</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680977331454</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.net.BindException" package="java.net" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
