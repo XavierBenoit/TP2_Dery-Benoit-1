@@ -87,9 +87,11 @@ public class Server {
     }
 
     /**
+     * Attend une ligne de commande de l'attribut de stream d'entrée, puis la gère.
      *
-      * @throws IOException
-     * @throws ClassNotFoundException
+     * @throws IOException Si une exception d'entrée ou de sortie (input/output) se produit
+     * @throws ClassNotFoundException Si l'objet provenant du stream d'entrée ne correspond pas
+     * à une ligne de commande
      */
     public void listen() throws IOException, ClassNotFoundException {
         String line;
@@ -116,7 +118,8 @@ public class Server {
     }
 
     /**
-     * Déconnecte les streams d'entrée et de sortie ainsi que le client.
+     * Déconnecte les attributs de streams d'entrée et de sortie ainsi que l'attribut client
+     * de ce serveur.
      *
      * @throws IOException Si une exception d'entrée ou de sortie (input/output) se produit
      */
@@ -149,7 +152,6 @@ public class Server {
      @param arg la session pour laquelle on veut récupérer la liste des cours
      */
     public void handleLoadCourses(String arg) {
-        // TODO: implémenter cette méthode
         try {
             File courses = new File("IFT1025-TP2-server-main/src/main/java/server/data/cours.txt");
             FileReader readCourses = new FileReader(courses);
@@ -181,7 +183,6 @@ public class Server {
      La méthode gére les exceptions si une erreur se produit lors de la lecture de l'objet, l'écriture dans un fichier ou dans le flux de sortie.
      */
     public void handleRegistration() {
-        // TODO: implémenter cette méthode
         try {
             RegistrationForm registrationForm = (RegistrationForm) objectInputStream.readObject();
             String prenom = registrationForm.getPrenom();
