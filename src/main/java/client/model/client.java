@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 public class Client {
 
-    private Socket clientSocket;
+    private static Socket clientSocket;
 
-    private ObjectInputStream objectInputStream;
-    private ObjectOutputStream objectOutputStream;
+    private static ObjectInputStream objectInputStream;
+    private static ObjectOutputStream objectOutputStream;
 
-    public void client() {
+    public static void client() {
         System.out.println("Bienvenue au portail d'inscription de l'UDEM");
         chargerListe();
 
     }
-    public void chargerListe(){
+    public static void chargerListe(){
         try{
             clientSocket = new Socket("127.0.0.1", 1337);
             System.out.println("Veuillez choisir la session pour laquelle vous voulez consulter la liste de cours (entrez le nombre correspondant au choix):");
@@ -95,7 +95,7 @@ public class Client {
             throw new RuntimeException(e);
         }
     }
-public void envoyerInscription(ArrayList<Course> courseList) throws IOException {
+public static void envoyerInscription(ArrayList<Course> courseList) throws IOException {
     Scanner inscriptionScanner = new Scanner (System.in);
     System.out.print("Veuillez saisir votre prénom");
     String prenom = inscriptionScanner.nextLine();
@@ -141,9 +141,12 @@ public void envoyerInscription(ArrayList<Course> courseList) throws IOException 
 
     objectOutputStream.writeObject(inscriptionCommand);
 
-
-
     inscriptionScanner.close();
 
+    chargerListe();
+    }
+
+    public static void main(String[] args) {
+        client();
     }
 }
