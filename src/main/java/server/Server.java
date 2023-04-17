@@ -56,7 +56,7 @@ public class Server {
 
     /**
      * Appelle la méthode <code>handle</code> de chacun des manipulateurs d'événements de ce
-     * serveur, avec une certaine commande une certaine ligne d'arguments.
+     * serveur, avec une certaine commande et une certaine ligne d'arguments.
      *
      * @param cmd la <code>String</code> de commande qui //TODO
      * @param arg
@@ -102,10 +102,11 @@ public class Server {
     }
 
     /**
+     * Sépare une ligne de commande en une commande et une ligne d'arguments.
      *
-     *
-     * @param line
-     * @return
+     * @param line la <code>String</code> de la ligne de commande
+     * @return une <code>Pair</code> de <code>String</code> contenant la commande
+     * et la ligne d'arguments
      */
     public Pair<String, String> processCommandLine(String line) {
         String[] parts = line.split(" ");
