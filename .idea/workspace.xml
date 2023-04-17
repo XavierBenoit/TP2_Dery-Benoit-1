@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="Javadoc classe ServerLauncher et EventHandler au propre">
+    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="Javadoc classe Server à moitié">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2_Dery-Benoit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP2_Dery-Benoit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/client/model/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rober/Downloads/projet_JacobDery_XavierBenoit&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/rober/Downloads/projet_JacobDery_XavierBenoit",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="client.model" />
@@ -122,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681699242808</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Javadoc classe registrationForm au propre">
+      <created>1681700884311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681700884311</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -132,6 +143,8 @@
     <MESSAGE value="Javadoc méthode listen + fix disconnect" />
     <MESSAGE value="Javadoc classe Course au propre" />
     <MESSAGE value="Javadoc classe ServerLauncher et EventHandler au propre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Javadoc classe ServerLauncher et EventHandler au propre" />
+    <MESSAGE value="Javadoc classe registrationForm au propre" />
+    <MESSAGE value="Javadoc classe Server à moitié" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc classe Server à moitié" />
   </component>
 </project>

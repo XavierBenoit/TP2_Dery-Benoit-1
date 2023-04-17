@@ -12,17 +12,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Un serveur qui reçoit des requêtes pour visualiser les cours du fichier cours.txt
- * ou pour entrer des inscriptions dans le fichier inscription.txt.
+ * Un serveur qui reçoit des requêtes pour visualiser certains cours du fichier cours.txt
+ * ou pour écrire des inscriptions dans le fichier inscription.txt.
  */
 public class Server {
 
     /**
      * la <code>String</code> associée à la commande d'inscription
+     *
+     * @see Server#handleEvents
      */
     public final static String REGISTER_COMMAND = "INSCRIRE";
     /**
      * la <code>String</code> associée à la commande de chargement
+     *
+     * @see Server#handleEvents
      */
     public final static String LOAD_COMMAND = "CHARGER";
     private final ServerSocket server;
@@ -32,10 +36,11 @@ public class Server {
     private final ArrayList<EventHandler> handlers;
 
     /**
-     * l'unique constructeur de la classe <code>Server</code>. Il initialise ce serveur sur le port
-     * entré en paramètre, pour un seul client à la fois, puis il initialise ses manipulateurs d'événements.
+     * un constructeur de la classe <code>Server</code>. Il initialise l'attribut <code>server</code>
+     * avec le paramètre <code>port</code>, pour un seul client à la fois, ainsi que l'attribut
+     * <code>handlers</code>, une liste de manipulateurs d'événements.
      *
-     * @param port le port sur lequel ce serveur sera lancé
+     * @param port le port avec lequel l'attribut <code>server</code> de cette classe sera initié
      * @throws IOException Si une exception d'entrée ou de sortie (input/output) se produit
      */
     public Server(int port) throws IOException {
@@ -45,7 +50,7 @@ public class Server {
     }
 
     /**
-     * Ajoute un manipulateur d'événement dans la liste de manipulateurs de ce serveur.
+     * Ajoute un manipulateur d'événement dans l'attribut <code>handlers</code> de cette classe.
      *
      * @param h le manipulateur d'événement à ajouter
      * @see EventHandler
