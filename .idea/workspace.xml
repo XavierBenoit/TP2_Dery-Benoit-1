@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="Javadoc classe Course au propre">
+    <list default="true" id="f84a99aa-efb4-4265-b543-889ba30c78a9" name="Changes" comment="Javadoc classe ServerLauncher et EventHandler au propre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServerLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/models/RegistrationForm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681697155450</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Javadoc classe ServerLauncher et EventHandler au propre">
+      <created>1681699242808</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681699242808</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,6 +131,7 @@
     <MESSAGE value="Javadoc méthodes disconnect et handleEvents" />
     <MESSAGE value="Javadoc méthode listen + fix disconnect" />
     <MESSAGE value="Javadoc classe Course au propre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Javadoc classe Course au propre" />
+    <MESSAGE value="Javadoc classe ServerLauncher et EventHandler au propre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc classe ServerLauncher et EventHandler au propre" />
   </component>
 </project>

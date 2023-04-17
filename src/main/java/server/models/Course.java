@@ -85,7 +85,7 @@ public class Course implements Serializable {
      * champs de cette classe.
      *
      * @return une <code>String</code> avec le nom de la classe et le contenu de chacun des
-     * champs de cette classe.
+     * champs de cette classe
      */
     @Override
     public String toString() {
